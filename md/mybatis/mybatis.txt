@@ -1,0 +1,72 @@
+## MyBatis 整理
+### 版本信息
+
+| 版本号 | 日期       | 作者   | 描述 |
+| ------ | ---------- | ------ | ---- |
+| v1.0   | 2018-07-08 | kshell |      |
+
+
+### 一：环境
+
+| 项目     | 版本号                                                |
+| -------- | ----------------------------------------------------- |
+| 操作系统 | Linux Mint 18.3 Sylvia 64 位                          |
+| 内核版本 | Linux 4.13.0-43-generic x86_64                        |
+| JDK      | java version "1.8.0_162" amd 64                       |
+| IDE      | IntelliJ IDEA 2018.1.1 (Ultimate Edition)             |
+| 数据库   | MariaDB-10.2.14+maria~jessie  (docker mariadb:latest) |
+| MyBatis  | 3.4.6                                                 |
+| Maven    | Apache Maven 3.5.2                                    |
+| Gradle   | Gradle 4.6                                            |
+
+### 二：MyBatis入门
+
+#### 什么是MyBatis
+
+- MyBatis是对JDBC的封装
+- 将sql语句封装在配置文件中
+- 自动将输入参数映射到sql语句的动态参数上
+- 自动将sql语句执行结果映射成实体对象
+
+##### maven依赖
+
+```
+	<dependencies>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.13.1</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.44</version>
+		</dependency>
+	</dependencies>
+```
+
+```
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.kshell.blog.mapper.BlogMapper.selectBlog
+```
+
+- 将BlogMapper.xml从src目录下转移到resources下成功
+
+
+
+
+
