@@ -1,0 +1,4 @@
+MacOS:
+mariadb-single
+docker run --name mariadb-single --network custmer --ip 172.168.0.30 -e MYSQL_ROOT_PASSWORD=123456 -d mariadb:latest
+
